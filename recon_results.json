@@ -1,0 +1,222 @@
+{
+    "metadata": {
+        "engine_version": "4.3.0-TELEGRAM-ALERT",
+        "timestamp_utc": "2026-08-20T08:58:45.232982+00:00",
+        "target_os": "Windows",
+        "hostname": "Izzatiin",
+        "python_version": "3.14.6"
+    },
+    "findings": {
+        "exposed_secrets": [
+            "GIT_ASKPASS=c:\\U****",
+            "VSCODE_GIT_ASKPASS_NODE=C:\\P****",
+            "VSCODE_GIT_ASKPASS_EXTRA_ARGS=****",
+            "VSCODE_GIT_ASKPASS_MAIN=c:\\U****"
+        ],
+        "persistence_hunt": [
+            {
+                "app": "OneDrive",
+                "path": "\"C:\\Users\\USER\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe\" /background"
+            },
+            {
+                "app": "CanvaAutoLaunchAvailabilityCheckAgent",
+                "path": "\"C:\\Users\\USER\\AppData\\Local\\Programs\\Canva\\Canva.exe\" --start-availability-check-agent"
+            },
+            {
+                "app": "Steam",
+                "path": "\"C:\\Program Files (x86)\\Steam\\steam.exe\" -silent"
+            },
+            {
+                "app": "EpicGamesLauncher",
+                "path": "\"C:\\Program Files\\Epic Games\\Launcher\\Portal\\Binaries\\Win64\\EpicGamesLauncher.exe\" -silent -launchcontext=boot"
+            },
+            {
+                "app": "RiotClient",
+                "path": "C:\\Riot Games\\Riot Client\\RiotClientServices.exe --launch-background-mode"
+            },
+            {
+                "app": "EADM",
+                "path": "\"C:\\Program Files\\Electronic Arts\\EA Desktop\\EA Desktop\\EALauncher.exe\" -silent"
+            },
+            {
+                "app": "MicrosoftEdgeAutoLaunch_28CC4C91291F97998E40A29656715B1C",
+                "path": "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --win-session-start"
+            },
+            {
+                "app": "GoogleChromeAutoLaunch_5F84849B2B55F3FB722B227E29B35DDB",
+                "path": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --no-startup-window /prefetch:5"
+            },
+            {
+                "app": "IDMan",
+                "path": "C:\\Program Files (x86)\\Internet Download Manager\\IDMan.exe /onboot"
+            },
+            {
+                "app": "electron.app.CurseForge",
+                "path": "C:\\Users\\USER\\AppData\\Local\\Programs\\CurseForge Windows\\CurseForge.exe --minimized"
+            },
+            {
+                "app": "RobloxPlayerBeta",
+                "path": "\"C:\\Users\\USER\\AppData\\Local\\Roblox\\Versions\\version-ddf602d9cfe44005\\RobloxPlayerBeta.exe\" --launch-to-tray"
+            },
+            {
+                "app": "electron.app.Notion",
+                "path": "\"C:\\Users\\USER\\AppData\\Local\\Programs\\Notion\\Notion.exe\" --open-at-login"
+            },
+            {
+                "app": "ut",
+                "path": "\"C:\\Users\\USER\\AppData\\Roaming\\utorrent\\uTorrent.exe\"  /MINIMIZED"
+            },
+            {
+                "app": "MicrosoftCopilotAutoLaunch_9A7F97C77BB80099A398BE72FD3E3B77",
+                "path": "\"C:\\Program Files (x86)\\Microsoft\\Copilot\\Application\\mscopilot.exe\" --no-startup-window --win-session-start"
+            }
+        ],
+        "user_accounts": [
+            "User accounts for \\\\IZZATIIN",
+            "-------------------------------------------------------------------------------",
+            "Administrator            CodexSandboxOffline      CodexSandboxOnline",
+            "DefaultAccount           Guest                    USER",
+            "WDAGUtilityAccount",
+            "The command completed successfully."
+        ],
+        "network_telemetry": [
+            "TCP    127.0.0.1:7768         127.0.0.1:59565        ESTABLISHED     27932",
+            "TCP    127.0.0.1:49673        127.0.0.1:52612        ESTABLISHED     9876",
+            "TCP    127.0.0.1:52612        127.0.0.1:49673        ESTABLISHED     12756",
+            "TCP    127.0.0.1:59565        127.0.0.1:7768         ESTABLISHED     15588",
+            "TCP    192.168.1.98:51426     52.175.140.176:443     ESTABLISHED     26432",
+            "TCP    192.168.1.98:51429     140.82.112.21:443      ESTABLISHED     27416",
+            "TCP    192.168.1.98:51552     140.82.114.25:443      ESTABLISHED     12756",
+            "TCP    192.168.1.98:52688     20.195.84.7:443        ESTABLISHED     5196",
+            "TCP    192.168.1.98:53070     74.125.24.188:5228     ESTABLISHED     12756",
+            "TCP    192.168.1.98:59118     34.158.1.133:443       ESTABLISHED     27932",
+            "TCP    192.168.1.98:61421     172.188.155.25:443     ESTABLISHED     17440",
+            "TCP    192.168.1.98:65057     4.150.223.97:443       ESTABLISHED     26432",
+            "TCP    [2404:c0:b203:f4a8:f86e:49b1:d42c:e68b]:49294  [2606:4700:4408::ac40:9bd1]:443  ESTABLISHED     3240",
+            "TCP    [2404:c0:b203:f4a8:f86e:49b1:d42c:e68b]:49427  [2603:1040:a06:6::]:443  ESTABLISHED     5836",
+            "TCP    [2404:c0:b203:f4a8:f86e:49b1:d42c:e68b]:49671  [2606:4700:4403::ac40:94eb]:443  ESTABLISHED     3240"
+        ],
+        "system_telemetry": {
+            "system_info": {
+                "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+                "machine": "AMD64",
+                "python_compiler": "MSC v.1944 64 bit (AMD64)"
+            },
+            "running_processes": [
+                "Image Name                     PID Session Name        Session#    Mem Usage",
+                "========================= ======== ================ =========== ============",
+                "dwm.exe                       1060 Console                    1    148.064 K",
+                "wallpaper64.exe               6248 Console                    1    255.936 K",
+                "NVDisplay.Container.exe       6864 Console                    1     18.544 K",
+                "sihost.exe                    8096 Console                    1     31.900 K",
+                "taskhostw.exe                 8296 Console                    1     21.780 K",
+                "svchost.exe                   8920 Console                    1     36.052 K",
+                "igfxEMN.exe                   8616 Console                    1     14.860 K",
+                "explorer.exe                  9876 Console                    1    215.672 K"
+            ]
+        },
+        "memory_analysis": [
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_ext_runtime/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_cli/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_plugins_gpl_restricted/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_plugins_gpl/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_plugins_libs/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_plugins_restricted/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_gtk/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:/Users/USER/AppData/Local/Python/pythoncore-3.14-64/Lib/site-packages/gstreamer_libs/bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "c:\\Users\\USER\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "c:\\Users\\USER\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Roaming\\npm\\claude.ps1",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Local\\Microsoft\\WindowsApps",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Local\\GitHubDesktop\\bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Local\\Python\\bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Local\\Programs\\Ollama",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Roaming\\npm",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Genymobile.scrcpy_Microsoft.Winget.Source_8wekyb3d8bbwe\\scrcpy-win64-v4.1",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "C:\\Users\\USER\\go\\bin",
+                "status": "HIJACK_RISK"
+            },
+            {
+                "writable_path": "c:\\Users\\USER\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts",
+                "status": "HIJACK_RISK"
+            }
+        ]
+    },
+    "anomalies_detected": [
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: OneDrive -> \"C:\\Users\\USER\\AppData\\Local\\Microsoft\\OneDrive\\OneDrive.exe\" /background",
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: CanvaAutoLaunchAvailabilityCheckAgent -> \"C:\\Users\\USER\\AppData\\Local\\Programs\\Canva\\Canva.exe\" --start-availability-check-agent",
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: electron.app.CurseForge -> C:\\Users\\USER\\AppData\\Local\\Programs\\CurseForge Windows\\CurseForge.exe --minimized",
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: RobloxPlayerBeta -> \"C:\\Users\\USER\\AppData\\Local\\Roblox\\Versions\\version-ddf602d9cfe44005\\RobloxPlayerBeta.exe\" --launch-to-tray",
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: electron.app.Notion -> \"C:\\Users\\USER\\AppData\\Local\\Programs\\Notion\\Notion.exe\" --open-at-login",
+        "[MITRE T1547.001] Suspicious AutoRun Persistence: ut -> \"C:\\Users\\USER\\AppData\\Roaming\\utorrent\\uTorrent.exe\"  /MINIMIZED"
+    ],
+    "remediation_actions": [],
+    "risk_summary": {
+        "risk_score": 210,
+        "severity_level": "CRITICAL",
+        "triggered_rules": [
+            "RULE_EXPOSED_CREDENTIALS",
+            "RULE_SUSPICIOUS_ANOMALY_DETECTED"
+        ]
+    },
+    "ai_insights": {
+        "ai_analysis": "Analysis:\n\nBased on the data, it appears that there is suspicious persistence on the system, with 14 instances of persistence found. The persistence samples suggest that the attacker is using legitimate applications such as OneDrive, Canva, and Steam to maintain a foothold on the system. This is concerning, as it indicates that the attacker may have achieved a level of persistence on the system.\n\nRemediation Steps:\n\n1. **Remove unnecessary persistence**: Review the persistence samples and remove any unnecessary or unused persistence mechanisms. For example, if the CanvaAutoLaunchAvailabilityCheckAgent is not required, it can be safely removed. This will help to reduce the attacker's ability to maintain a foothold on the system.\n2. **Conduct thorough application whitelisting**: Implement application whitelisting to ensure that only approved applications are allowed to run on the system. This can be achieved by using tools such as AppLocker or Windows Defender Application Controller. This will help to prevent the attacker from using legitimate applications like OneDrive or Steam to maintain persistence.",
+        "status": "SUCCESS"
+    },
+    "integrity": {
+        "algorithm": "SHA-256",
+        "sha256_signature": "5f70800d75663042dcf5dc418fa4a3596272326a8684f2cc86d9a11a08587e89"
+    }
+}
