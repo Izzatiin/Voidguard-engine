@@ -1,6 +1,6 @@
-# VOID-GUARD v4.3
+# VOIDGUAR-ENGINE v4.3
 
-> Recon & security monitoring tool dengan sistem alerting real-time via Telegram.
+> Recon & security monitoring tool with real-time alerting via Telegram.
 
 ![Version](https://img.shields.io/badge/version-4.3-blue)
 ![Status](https://img.shields.io/badge/status-stable-brightgreen)
@@ -8,67 +8,67 @@
 
 ---
 
-## 📖 Daftar Isi
+## 📖 Table of Contents
 
-- [Tentang Project](#-tentang-project)
-- [Fitur Utama](#-fitur-utama)
-- [Struktur Project](#-struktur-project)
-- [Instalasi](#-instalasi)
-- [Konfigurasi](#-konfigurasi)
-- [Cara Penggunaan](#-cara-penggunaan)
-- [Contoh Output](#-contoh-output)
-- [Keamanan & Disclaimer](#-keamanan--disclaimer)
-- [Kontribusi](#-kontribusi)
-- [Lisensi](#-lisensi)
+- [About](#-about)
+- [Key Features](#-key-features)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Sample Output](#-sample-output)
+- [Security & Disclaimer](#-security--disclaimer)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 🎯 Tentang Project
+## 🎯 About
 
-**VOID-GUARD** adalah tool untuk <!-- TODO: jelaskan fungsi utama, mis. "melakukan reconnaissance otomatis terhadap target/aset yang diizinkan, lalu mengirim notifikasi hasil temuan secara real-time" -->.
+**VOID-GUARD** is a tool for <!-- TODO: describe the core purpose, e.g. "running automated reconnaissance against authorized targets/assets and sending real-time findings" -->.
 
-Dibangun dengan arsitektur plugin sehingga mudah dikembangkan dan disesuaikan untuk kebutuhan spesifik.
+Built on a plugin-based architecture, making it easy to extend and customize for specific needs.
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-- 🔌 **Plugin-based Core Engine** — modular, mudah ditambah/dikurangi sesuai kebutuhan
-- 📡 **Notifikasi Real-time via Telegram** — hasil scan/audit langsung dikirim ke chat
-- 📝 **Audit Logging** — mencatat aktivitas ke `audit.log`
-- 📊 **Laporan Terstruktur** — output dalam format `recon_results.json` dan `report.html`
-- ⚙️ **Konfigurasi Terpusat** — semua pengaturan lewat `config.json`
+- 🔌 **Plugin-based Core Engine** — modular, easy to add or remove capabilities
+- 📡 **Real-time Telegram Alerts** — scan/audit results delivered instantly to chat
+- 📝 **Audit Logging** — activity recorded to `audit.log`
+- 📊 **Structured Reports** — output in `recon_results.json` and `report.html` formats
+- ⚙️ **Centralized Configuration** — all settings managed via `config.json`
 
-> Sesuaikan/tambahkan poin di atas dengan fitur aktual project kamu.
+> Adjust/add to the list above to match your project's actual features.
 
-## 📂 Struktur Project
+## 📂 Project Structure
 
 ```
 VOID-GUARD/
-├── main.py                # Entry point utama
-├── config.json             # File konfigurasi (token, target, dsb — JANGAN commit versi asli)
-├── plugins/                 # Modul-modul plugin
+├── main.py                # Main entry point
+├── config.json             # Configuration file (token, target, etc — DO NOT commit the real version)
+├── plugins/                 # Plugin modules
 │   └── ...
 ├── core/                    # Core engine
 │   └── ...
 ├── logs/
-│   └── audit.log            # Log aktivitas (di-gitignore)
+│   └── audit.log             # Activity log (gitignored)
 ├── output/
-│   ├── recon_results.json    # Hasil recon (di-gitignore)
-│   └── report.html           # Laporan visual (di-gitignore)
+│   ├── recon_results.json    # Recon results (gitignored)
+│   └── report.html           # Visual report (gitignored)
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-> ⚠️ Sesuaikan struktur di atas dengan struktur folder project kamu yang sebenarnya.
+> ⚠️ Update the structure above to match your project's actual folder layout.
 
-## 🚀 Instalasi
+## 🚀 Installation
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/username/void-guard.git
 cd void-guard
 
-# (Opsional) buat virtual environment
+# (Optional) create a virtual environment
 python3 -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
@@ -77,15 +77,15 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 ```
 
-## ⚙️ Konfigurasi
+## ⚙️ Configuration
 
-Sebelum menjalankan, salin file contoh konfigurasi dan isi dengan kredensial kamu sendiri:
+Before running, copy the example config file and fill in your own credentials:
 
 ```bash
 cp config.example.json config.json
 ```
 
-Lalu edit `config.json`:
+Then edit `config.json`:
 
 ```json
 {
@@ -96,58 +96,58 @@ Lalu edit `config.json`:
 }
 ```
 
-**Cara mendapatkan Telegram Bot Token & Chat ID:**
-1. Buat bot baru lewat [@BotFather](https://t.me/BotFather) di Telegram, lalu simpan token yang diberikan.
-2. Dapatkan `chat_id` dengan mengirim pesan ke bot, lalu akses `https://api.telegram.org/bot<TOKEN>/getUpdates`.
+**Getting a Telegram Bot Token & Chat ID:**
+1. Create a new bot via [@BotFather](https://t.me/BotFather) on Telegram and save the token it gives you.
+2. Get your `chat_id` by messaging the bot, then visiting `https://api.telegram.org/bot<TOKEN>/getUpdates`.
 
-> 🔒 **Jangan pernah commit `config.json` yang berisi token asli.** Gunakan `config.example.json` sebagai template publik.
+> 🔒 **Never commit a `config.json` containing real tokens.** Use `config.example.json` as the public template.
 
-## 🖥️ Cara Penggunaan
+## 🖥️ Usage
 
 ```bash
 python main.py --target <target> --config config.json
 ```
 
-Contoh opsi yang umum digunakan:
+Common CLI options:
 
-| Opsi | Deskripsi |
-|------|-----------|
-| `--target` | Target/aset yang akan diproses |
-| `--config` | Path ke file konfigurasi |
-| `--output`  | Direktori output laporan |
-| `--verbose` | Menampilkan log detail |
+| Option | Description |
+|--------|-------------|
+| `--target` | Target/asset to process |
+| `--config` | Path to the configuration file |
+| `--output`  | Output directory for reports |
+| `--verbose` | Show detailed logs |
 
-> Sesuaikan tabel ini dengan argumen CLI yang benar-benar tersedia di `main.py`.
+> Update this table to match the actual arguments implemented in `main.py`.
 
-## 📊 Contoh Output
+## 📊 Sample Output
 
-Hasil akan tersimpan di:
-- `output/recon_results.json` — data mentah hasil proses
-- `output/report.html` — laporan dalam format visual
-- `logs/audit.log` — catatan aktivitas/audit trail
+Results are saved to:
+- `output/recon_results.json` — raw processed data
+- `output/report.html` — visual report
+- `logs/audit.log` — activity/audit trail
 
-Notifikasi ringkasan hasil akan otomatis terkirim ke Telegram sesuai konfigurasi `alerting`.
+A summary notification is automatically sent to Telegram according to your `alerting` configuration.
 
-## 🔐 Keamanan & Disclaimer
+## 🔐 Security & Disclaimer
 
-- Tool ini ditujukan untuk **audit keamanan pada sistem/aset milik sendiri atau yang telah mendapat izin eksplisit**.
-- Penulis tidak bertanggung jawab atas penyalahgunaan tool ini terhadap sistem yang tidak diizinkan.
-- Pastikan `config.json`, `*.log`, dan hasil laporan sensitif **tidak** ikut ter-commit (lihat `.gitignore`).
+- This tool is intended for **security auditing of your own systems/assets or those you have explicit authorization to test**.
+- The author is not responsible for any misuse of this tool against unauthorized systems.
+- Make sure `config.json`, `*.log`, and sensitive report files are **not** committed (see `.gitignore`).
 
-## 🤝 Kontribusi
+## 🤝 Contributing
 
-Pull request dan issue sangat diterima. Untuk perubahan besar, mohon buka issue terlebih dahulu untuk didiskusikan.
+Pull requests and issues are welcome. For major changes, please open an issue first to discuss what you'd like to change.
 
-1. Fork repository ini
-2. Buat branch baru (`git checkout -b fitur-baru`)
-3. Commit perubahan (`git commit -m 'Menambahkan fitur X'`)
-4. Push ke branch (`git push origin fitur-baru`)
-5. Buka Pull Request
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Add feature X'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a Pull Request
 
-## 📄 Lisensi
+## 📄 License
 
-Project ini dilisensikan di bawah [MIT License](LICENSE) — silakan sesuaikan jika kamu menggunakan lisensi lain.
+This project is licensed under the [MIT License](LICENSE) — update this if you use a different license.
 
 ---
 
-<p align="center">Dibuat dengan ⚙️ oleh Tim VOID-GUARD</p>
+<p align="center">Built with ⚙️ by the VOID-GUARD Team</p>
